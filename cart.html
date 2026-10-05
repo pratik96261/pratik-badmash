@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Burger Cafe - Shopping Cart & Order</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">🍔 The Burger Cafe</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="burger.html">Burgers</a></li>
+      <li><a href="pizza.html">Pizzas</a></li>
+      <li><a href="fries.html">Fries</a></li>
+      <li><a href="combos.html">Combos</a></li>
+      <li><a href="cart.html" class="cart-link active">🛒 Cart (<span id="cart-count">0</span>)</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1 class="page-title">🛒 Your Shopping Cart</h1>
+
+    <!-- Message shown if cart is empty -->
+    <div id="empty-cart-msg" style="display:none; text-align:center; padding: 40px 20px; background:#fff; border-radius:8px; border:1px solid #e0e0e0;">
+      <h3 style="color:#666; margin-bottom:15px;">Your cart is currently empty!</h3>
+      <p style="color:#888; margin-bottom:20px;">Add some delicious burgers, pizzas, or fries to place an order.</p>
+      <a href="index.html" class="btn btn-primary">&larr; Back to Food Menu</a>
+    </div>
+
+    <!-- Active Cart Content -->
+    <div id="cart-content">
+      
+      <!-- Table of Cart Items -->
+      <table class="cart-table">
+        <thead>
+          <tr>
+            <th>Photo</th>
+            <th>Item Name</th>
+            <th>Price</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="cart-table-body">
+          <!-- Filled dynamically by script.js -->
+        </tbody>
+      </table>
+
+      <!-- Total Price Box -->
+      <div class="cart-total-box">
+        Grand Total: ₹<span id="cart-total">0</span>
+      </div>
+
+      <!-- Checkout Form with JavaScript Validation -->
+      <div class="form-box">
+        <h3>Customer & Delivery Details</h3>
+        <p style="font-size:13px; color:#666; margin-bottom:15px;">Please fill out this form to complete your order. All fields are verified by JavaScript.</p>
+
+        <form id="checkout-form" onsubmit="return validateAndOrder(event)">
+          
+          <!-- Name Input -->
+          <div class="form-group">
+            <label for="cust-name">Full Name *</label>
+            <input type="text" id="cust-name" placeholder="Enter your full name">
+            <span class="error-text" id="name-error"></span>
+          </div>
+
+          <!-- Phone Input -->
+          <div class="form-group">
+            <label for="cust-phone">Mobile Number (10 Digits) *</label>
+            <input type="tel" id="cust-phone" placeholder="Enter 10-digit mobile number" maxlength="10">
+            <span class="error-text" id="phone-error"></span>
+          </div>
+
+          <!-- Email Input -->
+          <div class="form-group">
+            <label for="cust-email">Email Address *</label>
+            <input type="email" id="cust-email" placeholder="example@email.com">
+            <span class="error-text" id="email-error"></span>
+          </div>
+
+          <!-- Address Input -->
+          <div class="form-group">
+            <label for="cust-address">Delivery Address *</label>
+            <textarea id="cust-address" rows="3" placeholder="Enter your full house no., street, and area"></textarea>
+            <span class="error-text" id="address-error"></span>
+          </div>
+
+          <!-- Payment Option -->
+          <div class="form-group">
+            <label for="cust-payment">Payment Method *</label>
+            <select id="cust-payment">
+              <option value="">-- Select Payment Method --</option>
+              <option value="cod">Cash on Delivery (COD)</option>
+              <option value="upi">UPI / QR Code</option>
+              <option value="card">Credit / Debit Card</option>
+            </select>
+            <span class="error-text" id="payment-error"></span>
+          </div>
+
+          <!-- Submit Order Button -->
+          <button type="submit" class="btn btn-success" style="width:100%; padding:12px; font-size:16px;">
+            Place Order &rarr;
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ORDER SUCCESSFUL POPUP MODAL (Controlled by jQuery) -->
+  <div class="modal-overlay" id="orderSuccessModal">
+    <div class="modal-box success-popup">
+      <div class="success-icon">&#10004;</div>
+      <h2>Order Successful!</h2>
+      <p style="color:#555; font-size:14px;">Thank you! Your order has been placed successfully and is being prepared.</p>
+
+      <div class="order-details-box">
+        <p><strong>Order ID:</strong> <span id="order-id-display"></span></p>
+        <p><strong>Customer Name:</strong> <span id="order-name-display"></span></p>
+        <p><strong>Phone:</strong> <span id="order-phone-display"></span></p>
+        <p><strong>Delivery Address:</strong> <span id="order-address-display"></span></p>
+        <p><strong>Total Amount:</strong> <span id="order-total-display" style="color:#d35400; font-weight:bold;"></span></p>
+        <p><strong>Estimated Time:</strong> 30 - 35 minutes</p>
+      </div>
+
+      <button class="btn btn-primary" onclick="closeOrderPopup()">Back to Home</button>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    // Call displayCart() on page load to render table items
+    $(document).ready(function() {
+      displayCart();
+    });
+  </script>
+</body>
+</html>

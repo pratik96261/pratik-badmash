@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Burger Cafe - Pizzas Menu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">🍔 The Burger Cafe</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="burger.html">Burgers</a></li>
+      <li><a href="pizza.html" class="active">Pizzas</a></li>
+      <li><a href="fries.html">Fries</a></li>
+      <li><a href="combos.html">Combos</a></li>
+      <li><a href="cart.html" class="cart-link">🛒 Cart (<span id="cart-count">0</span>)</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1 class="page-title">🍕 Pizzas Menu</h1>
+    <p class="page-subtitle">Oven-baked pizzas made with fresh dough, pizza sauce, and real mozzarella cheese.</p>
+
+    <div class="grid-container">
+      
+      <!-- Pizza 1 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=400&auto=format&fit=crop&q=80" alt="Margherita Pizza">
+        <h3>Margherita Pizza</h3>
+        <p>Classic Italian pizza topped with fresh tomato sauce, mozzarella, and basil herbs.</p>
+        <div class="price">₹249</div>
+        <button class="btn btn-primary" onclick="addToCart('Margherita Pizza', 249, 'https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=400&auto=format&fit=crop&q=80')">Add to Cart</button>
+      </div>
+
+      <!-- Pizza 2 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&auto=format&fit=crop&q=80" alt="Farmhouse Veggie Pizza">
+        <h3>Farmhouse Veggie Pizza</h3>
+        <p>Loaded with bell peppers, sweet corn, black olives, onions, and melted cheese.</p>
+        <div class="price">₹299</div>
+        <button class="btn btn-primary" onclick="addToCart('Farmhouse Veggie Pizza', 299, 'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&auto=format&fit=crop&q=80')">Add to Cart</button>
+      </div>
+
+      <!-- Pizza 3 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&auto=format&fit=crop&q=80" alt="Spicy Chicken Pizza">
+        <h3>Spicy Chicken Pizza</h3>
+        <p>Tender barbecue chicken pieces, red paprika, jalapenos, and mozzarella cheese.</p>
+        <div class="price">₹349</div>
+        <button class="btn btn-primary" onclick="addToCart('Spicy Chicken Pizza', 349, 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&auto=format&fit=crop&q=80')">Add to Cart</button>
+      </div>
+
+      <!-- Pizza 4 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&auto=format&fit=crop&q=80" alt="Paneer Special Pizza">
+        <h3>Paneer Special Pizza</h3>
+        <p>Marinated paneer cubes with green capsicum, onion, and red chili flakes.</p>
+        <div class="price">₹319</div>
+        <button class="btn btn-primary" onclick="addToCart('Paneer Special Pizza', 319, 'https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&auto=format&fit=crop&q=80')">Add to Cart</button>
+      </div>
+
+      <!-- Pizza 5 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=400&auto=format&fit=crop&q=80" alt="Pepperoni Feast Pizza">
+        <h3>Pepperoni Feast Pizza</h3>
+        <p>Topped with seasoned chicken pepperoni slices and extra mozzarella cheese.</p>
+        <div class="price">₹389</div>
+        <button class="btn btn-primary" onclick="addToCart('Pepperoni Feast Pizza', 389, 'https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=400&auto=format&fit=crop&q=80')">Add to Cart</button>
+      </div>
+
+      <!-- Pizza 6 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=400&auto=format&fit=crop&q=80" alt="Cheese Burst Pizza">
+        <h3>Double Cheese Burst</h3>
+        <p>Crust filled with gooey molten liquid cheese and topped with golden cheddar.</p>
+        <div class="price">₹359</div>
+        <button class="btn btn-primary" onclick="addToCart('Double Cheese Burst', 359, 'https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=400&auto=format&fit=crop&q=80')">Add to Cart</button>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Burger Cafe - Home</title>
+  <!-- Simple Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">🍔 The Burger Cafe</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="burger.html">Burgers</a></li>
+      <li><a href="pizza.html">Pizzas</a></li>
+      <li><a href="fries.html">Fries</a></li>
+      <li><a href="combos.html">Combos</a></li>
+      <li><a href="cart.html" class="cart-link">🛒 Cart (<span id="cart-count">0</span>)</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Container -->
+  <div class="container">
+    
+    <!-- Welcome Banner -->
+    <div class="banner">
+      <h1>Welcome to The Burger Cafe</h1>
+      <style>
+        h1{
+          font-size: 500px;
+        }
+        </style>
+      <p>Freshly grilled burgers, cheesy stone-baked pizzas, hot crispy fries, and delicious meal combos made fresh for you!</p>
+    </div>
+
+    <!-- The 4 Main Food Categories Options -->
+    <h2 class="page-title">Explore Our 4 Food Categories</h2>
+    <p class="page-subtitle">Click "Quick Popup" to see items in a pop-up window, or click "View Page" to open the full menu page.</p>
+
+    <div class="grid-container">
+      
+      <!-- Option 1: Burger -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&auto=format&fit=crop&q=80" alt="Burgers">
+        <h3>🍔 Burgers</h3>
+        <p>Juicy patties, melted cheese, and fresh toasted buns.</p>
+        <div class="category-btn-group">
+          <button class="btn btn-primary" onclick="openCategoryPopup('burger')">Quick Popup</button>
+          <a href="burger.html" class="btn btn-secondary">View Page</a>
+        </div>
+      </div>
+
+      <!-- Option 2: Pizza -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=400&auto=format&fit=crop&q=80" alt="Pizzas">
+        <h3>🍕 Pizzas</h3>
+        <p>Crispy crust with rich tomato sauce and 100% mozzarella cheese.</p>
+        <div class="category-btn-group">
+          <button class="btn btn-primary" onclick="openCategoryPopup('pizza')">Quick Popup</button>
+          <a href="pizza.html" class="btn btn-secondary">View Page</a>
+        </div>
+      </div>
+
+      <!-- Option 3: Fries -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=400&auto=format&fit=crop&q=80" alt="Fries">
+        <h3>🍟 Fries</h3>
+        <p>Hot, golden, and crispy potato fries with tasty seasonings.</p>
+        <div class="category-btn-group">
+          <button class="btn btn-primary" onclick="openCategoryPopup('fries')">Quick Popup</button>
+          <a href="fries.html" class="btn btn-secondary">View Page</a>
+        </div>
+      </div>
+
+      <!-- Option 4: Combos -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=400&auto=format&fit=crop&q=80" alt="Combos">
+        <h3>🥤 Combos</h3>
+        <p>Save money with our value burger, pizza, fries, and cold drink combos.</p>
+        <div class="category-btn-group">
+          <button class="btn btn-primary" onclick="openCategoryPopup('combos')">Quick Popup</button>
+          <a href="combos.html" class="btn btn-secondary">View Page</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Chef's Specials -->
+    <h2 class="page-title">Today's Popular Picks</h2>
+    <div class="grid-container">
+      
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&auto=format&fit=crop&q=80" alt="Classic Veg Burger">
+        <h3>Classic Veg Burger</h3>
+        <p>Crispy potato patty with fresh lettuce and mayo.</p>
+        <div class="price">₹129</div>
+        <button class="btn btn-primary" onclick="addToCart('Classic Veg Burger', 129, 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&auto=format&fit=crop&q=80')">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=400&auto=format&fit=crop&q=80" alt="Margherita Pizza">
+        <h3>Margherita Pizza</h3>
+        <p>Cheesy pizza with basil and Italian seasoning.</p>
+        <div class="price">₹249</div>
+        <button class="btn btn-primary" onclick="addToCart('Margherita Pizza', 249, 'https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=400&auto=format&fit=crop&q=80')">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=400&auto=format&fit=crop&q=80" alt="Classic Salted Fries">
+        <h3>Classic Salted Fries</h3>
+        <p>Golden potato fries with light sea salt.</p>
+        <div class="price">₹89</div>
+        <button class="btn btn-primary" onclick="addToCart('Classic Salted Fries', 89, 'https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=400&auto=format&fit=crop&q=80')">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=400&auto=format&fit=crop&q=80" alt="Burger Combo">
+        <h3>Burger + Fries + Coke</h3>
+        <p>Classic burger with medium fries and cold drink.</p>
+        <div class="price">₹249</div>
+        <button class="btn btn-primary" onclick="addToCart('Burger + Fries + Coke', 249, 'https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=400&auto=format&fit=crop&q=80')">Add to Cart</button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Pop-up Modal for the 4 Category Options (Controlled by jQuery) -->
+  <div class="modal-overlay" id="categoryModal">
+    <div class="modal-box">
+      <span class="close-btn" onclick="closeCategoryPopup()">&times;</span>
+      <h2 id="popup-title">Category Options</h2>
+      <div class="popup-items-list" id="popup-list">
+        <!-- Injected dynamically by script.js -->
+      </div>
+      <div style="text-align: right; margin-top: 10px;">
+        <a href="#" id="popup-view-page-btn" class="btn btn-secondary">Open Full Page &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery & Simple Script -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

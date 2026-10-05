@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Burger Cafe - Burgers Menu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">🍔 The Burger Cafe</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="burger.html" class="active">Burgers</a></li>
+      <li><a href="pizza.html">Pizzas</a></li>
+      <li><a href="fries.html">Fries</a></li>
+      <li><a href="combos.html">Combos</a></li>
+      <li><a href="cart.html" class="cart-link">🛒 Cart (<span id="cart-count">0</span>)</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1 class="page-title">🍔 Burgers Menu</h1>
+    <p class="page-subtitle">Choose from our freshly made vegetable and chicken burgers.</p>
+
+    <div class="grid-container">
+      
+      <!-- Burger 1 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&auto=format&fit=crop&q=80" alt="Classic Veg Burger">
+        <h3>Classic Veg Burger</h3>
+        <p>Crunchy potato and peas patty with lettuce, tomatoes, and mayo.</p>
+        <div class="price">₹129</div>
+        <button class="btn btn-primary" onclick="addToCart('Classic Veg Burger', 129, 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&auto=format&fit=crop&q=80')">Add to Cart</button>
+      </div>
+
+      <!-- Burger 2 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=400&auto=format&fit=crop&q=80" alt="Cheese Smash Burger">
+        <h3>Cheese Smash Burger</h3>
+        <p>Loaded with double melted cheddar cheese, onions, and spicy sauce.</p>
+        <div class="price">₹169</div>
+        <button class="btn btn-primary" onclick="addToCart('Cheese Smash Burger', 169, 'https://images.unsplash.com/photo-1550547660-d9450f859349?w=400&auto=format&fit=crop&q=80')">Add to Cart</button>
+      </div>
+
+      <!-- Burger 3 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?w=400&auto=format&fit=crop&q=80" alt="Crispy Chicken Burger">
+        <h3>Crispy Chicken Burger</h3>
+        <p>Golden fried chicken patty with tangy pickled onions and garlic sauce.</p>
+        <div class="price">₹199</div>
+        <button class="btn btn-primary" onclick="addToCart('Crispy Chicken Burger', 199, 'https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?w=400&auto=format&fit=crop&q=80')">Add to Cart</button>
+      </div>
+
+      <!-- Burger 4 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=400&auto=format&fit=crop&q=80" alt="Paneer Tikka Burger">
+        <h3>Paneer Tikka Burger</h3>
+        <p>Tandoori grilled cottage cheese patty with mint chutney.</p>
+        <div class="price">₹179</div>
+        <button class="btn btn-primary" onclick="addToCart('Paneer Tikka Burger', 179, 'https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=400&auto=format&fit=crop&q=80')">Add to Cart</button>
+      </div>
+
+      <!-- Burger 5 -->
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPe-4haQmk00fdPP8-shYF1pIOHXOCpZ4CKPeJ3hGDoCo0uP8Tk7yblus&s=10" alt="Double Patty Monster Burger">
+        <h3>Double Monster Burger</h3>
+        <p>Two grilled patties with barbecue sauce, cheese, and fried onions.</p>
+        <div class="price">₹269</div>
+        <button class="btn btn-primary" onclick="addToCart('Double Monster Burger', 269, 'https://images.unsplash.com/photo-1583032015879-bf75369680c7?w=400&auto=format&fit=crop&q=80')">Add to Cart</button>
+      </div>
+
+      <!-- Burger 6 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=400&auto=format&fit=crop&q=80" alt="Spicy Jalapeno Burger">
+        <h3>Spicy Jalapeno Burger</h3>
+        <p>Hot green jalapenos, pepper jack cheese, and Mexican chipotle mayo.</p>
+        <div class="price">₹189</div>
+        <button class="btn btn-primary" onclick="addToCart('Spicy Jalapeno Burger', 189, 'https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=400&auto=format&fit=crop&q=80')">Add to Cart</button>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

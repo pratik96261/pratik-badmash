@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Burger Cafe - Combos Menu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">🍔 The Burger Cafe</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="burger.html">Burgers</a></li>
+      <li><a href="pizza.html">Pizzas</a></li>
+      <li><a href="fries.html">Fries</a></li>
+      <li><a href="combos.html" class="active">Combos</a></li>
+      <li><a href="cart.html" class="cart-link">🛒 Cart (<span id="cart-count">0</span>)</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1 class="page-title">🥤 Value Combos Menu</h1>
+    <p class="page-subtitle">Best meal deals pairing burgers, pizzas, crispy fries, and refreshing cold drinks.</p>
+
+    <div class="grid-container">
+      
+      <!-- Combo 1 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=400&auto=format&fit=crop&q=80" alt="Burger Combo">
+        <h3>Burger + Fries + Coke</h3>
+        <p>1 Classic Veg Burger + 1 Medium Salted Fries + 1 Chilled Coca-Cola.</p>
+        <div class="price">₹249</div>
+        <button class="btn btn-primary" onclick="addToCart('Burger + Fries + Coke', 249, 'https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=400&auto=format&fit=crop&q=80')">Add to Cart</button>
+      </div>
+
+      <!-- Combo 2 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&auto=format&fit=crop&q=80" alt="Pizza Duo Combo">
+        <h3>Pizza + Fries Combo</h3>
+        <p>1 Regular Margherita Pizza + 1 Cheesy Loaded Fries + 1 Soft Drink.</p>
+        <div class="price">₹349</div>
+        <button class="btn btn-primary" onclick="addToCart('Pizza + Fries Combo', 349, 'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&auto=format&fit=crop&q=80')">Add to Cart</button>
+      </div>
+
+      <!-- Combo 3 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1561758033-d89a9ad46330?w=400&auto=format&fit=crop&q=80" alt="Family Meal Box">
+        <h3>Family Meal Box</h3>
+        <p>2 Veg Burgers + 1 Medium Farmhouse Pizza + 1 Large Fries + 2 Cold Drinks.</p>
+        <div class="price">₹599</div>
+        <button class="btn btn-primary" onclick="addToCart('Family Meal Box', 599, 'https://images.unsplash.com/photo-1561758033-d89a9ad46330?w=400&auto=format&fit=crop&q=80')">Add to Cart</button>
+      </div>
+
+      <!-- Combo 4 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1562967914-608f82629710?w=400&auto=format&fit=crop&q=80" alt="Chicken Strips Combo">
+        <h3>Chicken Crunch Meal</h3>
+        <p>4 Crispy Chicken Strips + Peri-Peri Fries + Garlic Dip + 1 Drink.</p>
+        <div class="price">₹289</div>
+        <button class="btn btn-primary" onclick="addToCart('Chicken Crunch Meal', 289, 'https://images.unsplash.com/photo-1562967914-608f82629710?w=400&auto=format&fit=crop&q=80')">Add to Cart</button>
+      </div>
+
+      <!-- Combo 5 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=400&auto=format&fit=crop&q=80" alt="Student Budget Box">
+        <h3>Student Budget Box</h3>
+        <p>1 Small Veg Burger + 1 Small Fries + 1 Iced Tea at an affordable price.</p>
+        <div class="price">₹179</div>
+        <button class="btn btn-primary" onclick="addToCart('Student Budget Box', 179, 'https://images.unsplash.com/photo-1550547660-d9450f859349?w=400&auto=format&fit=crop&q=80')">Add to Cart</button>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

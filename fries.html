@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Burger Cafe - Fries & Sides</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">🍔 The Burger Cafe</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="burger.html">Burgers</a></li>
+      <li><a href="pizza.html">Pizzas</a></li>
+      <li><a href="fries.html" class="active">Fries</a></li>
+      <li><a href="combos.html">Combos</a></li>
+      <li><a href="cart.html" class="cart-link">🛒 Cart (<span id="cart-count">0</span>)</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1 class="page-title">🍟 Crispy Fries & Sides</h1>
+    <p class="page-subtitle">Golden, crunchy, and freshly prepared potato fries and sides.</p>
+
+    <div class="grid-container">
+      
+      <!-- Fries 1 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=400&auto=format&fit=crop&q=80" alt="Classic Salted Fries">
+        <h3>Classic Salted Fries</h3>
+        <p>Crunchy golden potato fries sprinkled with simple table salt.</p>
+        <div class="price">₹89</div>
+        <button class="btn btn-primary" onclick="addToCart('Classic Salted Fries', 89, 'https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=400&auto=format&fit=crop&q=80')">Add to Cart</button>
+      </div>
+
+      <!-- Fries 2 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?w=400&auto=format&fit=crop&q=80" alt="Peri-Peri Spicy Fries">
+        <h3>Peri-Peri Spicy Fries</h3>
+        <p>Tossed in our tangy and spicy peri-peri seasoning mix.</p>
+        <div class="price">₹119</div>
+        <button class="btn btn-primary" onclick="addToCart('Peri-Peri Spicy Fries', 119, 'https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?w=400&auto=format&fit=crop&q=80')">Add to Cart</button>
+      </div>
+
+      <!-- Fries 3 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1585109649139-366815a0d713?w=400&auto=format&fit=crop&q=80" alt="Cheesy Loaded Fries">
+        <h3>Cheesy Loaded Fries</h3>
+        <p>Hot fries topped with warm melted yellow cheddar cheese sauce.</p>
+        <div class="price">₹149</div>
+        <button class="btn btn-primary" onclick="addToCart('Cheesy Loaded Fries', 149, 'https://images.unsplash.com/photo-1585109649139-366815a0d713?w=400&auto=format&fit=crop&q=80')">Add to Cart</button>
+      </div>
+
+      <!-- Fries 4 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1531749668029-2db88e4276c7?w=400&auto=format&fit=crop&q=80" alt="Mozzarella Cheese Sticks">
+        <h3>Mozzarella Sticks</h3>
+        <p>Crispy breaded cheese sticks served with tangy marinara dip.</p>
+        <div class="price">₹159</div>
+        <button class="btn btn-primary" onclick="addToCart('Mozzarella Sticks', 159, 'https://images.unsplash.com/photo-1531749668029-2db88e4276c7?w=400&auto=format&fit=crop&q=80')">Add to Cart</button>
+      </div>
+
+      <!-- Fries 5 -->
+      <div class="card">
+        <img src="https://dreenaburton.com/wp-content/uploads/2022/11/Oven-Baked-Onion-Rings-7-min-scaled.jpg" alt="Crispy Onion Rings">
+        <h3>Crispy Onion Rings</h3>
+        <p>Sliced sweet onions coated in crispy batter and fried to perfection.</p>
+        <div class="price">₹129</div>
+        <button class="btn btn-primary" onclick="addToCart('Crispy Onion Rings', 129, 'https://images.unsplash.com/photo-1639024471287-032f66ab7523?w=400&auto=format&fit=crop&q=80')">Add to Cart</button>
+      </div>
+
+      <!-- Fries 6 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?w=400&auto=format&fit=crop&q=80" alt="Chicken Loaded Fries">
+        <h3>Chicken Loaded Fries</h3>
+        <p>Crispy fries loaded with seasoned chicken bits and garlic mayo.</p>
+        <div class="price">₹179</div>
+        <button class="btn btn-primary" onclick="addToCart('Chicken Loaded Fries', 179, 'https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?w=400&auto=format&fit=crop&q=80')">Add to Cart</button>
+      </div>
+
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
